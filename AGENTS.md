@@ -19,13 +19,13 @@
 
 ## Product and implementation rules
 
-- Follow `PROMPT_MASTER.md` and the supplied illustration prompts; preserve those source files unchanged.
+- Follow the latest user brief: a clean, balanced eight-block landing page (hero, training loop, illustrative scorecard, methodology, scenario catalog, cultural fluency, Nomigen architecture, roadmap and contacts). It supersedes both the four-section reduction and the earlier console design. Preserve `PROMPT_MASTER_V2.md`, the original `PROMPT_MASTER.md`, and all illustration prompts unchanged.
 - Site copy is English. Keep Nomigen as the platform and Oitu as its flagship product.
 - Keep UI content and scenario data typed and separate from presentation where practical.
-- Keep assets local. Optimize illustrations for the web and provide meaningful alt text; render important labels and metrics as accessible HTML.
+- Keep assets and fonts local. Use generous whitespace, clear typography, simple cards, and one cyan accent on dark slate. Avoid console instrumentation, dense live telemetry, generated illustrations, blurred gradients, and decorative raster imagery. An illustrative post-session scorecard and a clear interactive training loop explain product value without recreating a control panel. Preserve previous illustration assets unused. Render meaningful content as accessible HTML.
 - Never embed provider API keys or call ElevenLabs directly from the browser. No backend or microphone recording is required.
-- Mark example telemetry as illustrative and latency/language targets as planned. Clearly distinguish the current Telegram experience, future capabilities, and the grant application from a grant award.
-- Do not claim scientific validation, deployed architecture, company legal status, or unavailable functionality without evidence. Check provider model claims against official documentation.
+- Mark example reports and telemetry as illustrative and latency/language targets as planned. Current Phase 1 uses asynchronous Telegram voice notes; live interruption and real-time calls belong to Phase 2. Clearly distinguish the current Telegram experience, future capabilities, and the grant application from a grant award.
+- Do not claim scientific validation, deployed architecture, company legal status, or unavailable functionality without evidence. Check provider model claims against official documentation. Present established psychological techniques as inspiration, not clinical validation of Oitu; avoid guarantees, medical treatment claims, and cultural stereotypes.
 - Use real destinations for links. Missing documentation, API status, and legal destinations must remain visibly unavailable rather than point at fabricated pages.
 - Preserve semantic headings, visible keyboard focus, keyboard operation, responsive layouts, sufficient contrast, and `prefers-reduced-motion` support.
 - Audio previews must use actual supplied recordings. Missing or failed recordings show a transcript and an honest unavailable state; never simulate playback.
