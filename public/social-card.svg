@@ -1,21 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <defs><style>@font-face{font-family:Inter;src:url('/fonts/inter-latin-variable.woff2')}text{font-family:Inter,Arial,sans-serif}</style></defs>
-  <rect width="1200" height="630" fill="#10171b"/>
-  <text x="70" y="88" fill="#f4f7f6" font-size="45" font-weight="650" letter-spacing="-3">oitu</text>
-  <text x="164" y="85" fill="#b6c5c9" font-size="16">by Nomigen</text>
-  <text x="70" y="240" fill="#f4f7f6" font-size="71" font-weight="500" letter-spacing="-4">Rehearse your</text>
-  <text x="70" y="322" fill="#f4f7f6" font-size="71" font-weight="500" letter-spacing="-4">difficult</text>
-  <text x="70" y="404" fill="#f4f7f6" font-size="71" font-weight="500" letter-spacing="-4">conversation.</text>
-  <text x="74" y="470" fill="#b6c5c9" font-size="22">Voice practice in Telegram.</text>
-  <rect x="690" y="166" width="440" height="280" rx="18" fill="#182328"/>
-  <text x="722" y="208" fill="#b6c5c9" font-size="14">Your manager</text>
-  <text x="722" y="250" fill="#f4f7f6" font-size="26">“Everyone else is</text>
-  <text x="722" y="286" fill="#f4f7f6" font-size="26">making an effort.”</text>
-  <path d="M761 330v80" stroke="#67e8ef" stroke-width="3"/>
-  <text x="781" y="345" fill="#67e8ef" font-size="13">You, with a little practice</text>
-  <text x="781" y="379" fill="#f4f7f6" font-size="25">“I'm not available</text>
-  <text x="781" y="412" fill="#f4f7f6" font-size="25">this weekend.”</text>
-  <circle cx="78" cy="563" r="5" fill="#67e8ef"/>
-  <text x="96" y="570" fill="#b6c5c9" font-size="17">Live in Private Alpha</text>
-  <text x="974" y="570" fill="#67e8ef" font-size="19">nomigen.com</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Oitu by Nomigen — Hard to say? Say it here first.</title>
+  <desc id="description">Voice rehearsal for your next difficult conversation. An example response: I'm not available this weekend.</desc>
+  <defs>
+    <style>
+      @font-face{font-family:Inter;src:url('/fonts/inter-latin-variable.woff2');font-weight:100 900}
+      @font-face{font-family:Barlow;src:url('/fonts/barlow-condensed-semibold.ttf');font-weight:600}
+      text{font-family:Inter,Arial,sans-serif}
+      .display{font-family:Barlow,'Arial Narrow',sans-serif;font-weight:600;letter-spacing:-1.5px}
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="#142127"/>
+  <text x="70" y="80" fill="#f3f7f5" font-size="45" font-weight="650" letter-spacing="-1.5">oitu</text>
+  <text x="165" y="77" fill="#b5c5cb" font-size="16">by Nomigen</text>
+  <text x="995" y="77" fill="#83e3e7" font-size="15">Private Alpha</text>
+  <text class="display" x="70" y="218" fill="#f3f7f5" font-size="96">Hard to say?</text>
+  <text class="display" x="316" y="323" fill="#f3f7f5" font-size="96">Say it here first.</text>
+  <text x="74" y="391" fill="#b5c5cb" font-size="22">Voice rehearsal for your next difficult conversation.</text>
+  <rect y="456" width="1200" height="174" fill="#83e3e7"/>
+  <text x="73" y="498" fill="#153137" font-size="14">You, with a little practice</text>
+  <text class="display" x="70" y="565" fill="#153137" font-size="56">“I'm not available this weekend.”</text>
+  <text x="990" y="598" fill="#153137" font-size="17">nomigen.com</text>
 </svg>

@@ -2,7 +2,7 @@
 
 Oitu is Nomigen’s flagship voice rehearsal product, live in Private Alpha with early testers. This English landing page uses React, Vite and TypeScript to show one coherent practice conversation, from a personal situation to a useful debrief.
 
-The page has eight blocks: hero, interactive practice loop, illustrative post-session breakdown, methodology, current scenarios and custom situations, six-language examples, Nomigen architecture and team, and roadmap with contacts. The visual direction is dark slate with one cyan accent, local typography, open layouts and a conversation as the main visual object. Original prompt files and previous illustrations remain unchanged.
+The page has eight blocks: hero, interactive practice loop, illustrative post-session breakdown, methodology, current scenarios and custom situations, six-language examples, Nomigen architecture and team, and roadmap with contacts. The Impeccable redesign uses a public invitation as its visual language: offset Barlow Condensed display typography, dark slate, one cyan response band, open layouts, and the actual conversation as the main visual object. Original prompt files and previous illustrations remain unchanged.
 
 ## Development
 
@@ -26,7 +26,7 @@ The build typechecks and writes the static production site to `dist/`. Cloudflar
 
 Content and typed example data are in `src/data/content.ts`. The demonstration is explicitly illustrative: the same words appear in the hero, practice sequence, audio transcript and debrief. There are no fabricated performance scores or user metrics.
 
-The preparation example previews three pressure levels. Changing the level explains its meaning; the supplied recording remains one fixed example conversation. Users choose their actual settings in the Telegram bot. Step controls and language controls support keyboard navigation, and the coaching hint is a local interactive demonstration.
+The preparation example previews three pressure levels. Changing the level explains its meaning; the supplied recording remains one fixed example conversation. Users choose their actual settings in the Telegram bot. The practice rail and language controls support keyboard navigation; the contextual hint reveals an exact suggested reply. Scenario disclosures use native HTML keyboard behaviour.
 
 The product supports text and voice descriptions of custom situations, preparation, adjustable pressure, voice selection, contextual hints, structured feedback, history and repeat attempts. The UI and practice language can be selected independently across English, Spanish, German, Arabic, Polish and Russian. The architecture section describes the active multi-stage pipeline with `scribe_v2`, role and response review, English emotional directing, `eleven_v4` and native acoustic scenes. Real-time streaming and subscription expansion are presented as roadmap work.
 
@@ -43,7 +43,9 @@ There is no microphone recording, backend, provider API call or embedded API key
 
 ## Assets, links and validation
 
-Fonts are local in `public/fonts/`, with their license notices. Previous illustrations remain unused in `design/archive/v1-images/`. The social card is a deterministic PNG export of `public/social-card.svg`.
+Fonts are local in `public/fonts/`, with their license notices. Barlow Condensed medium and semibold are sourced from Google Fonts; the [upstream family and OFL license](https://github.com/google/fonts/tree/main/ofl/barlowcondensed) identify the font’s origin. Inter remains the body and interface face. Previous illustrations remain unused in `design/archive/v1-images/`. The social card is a deterministic browser export of `public/social-card.svg`; its PNG embeds origin metadata.
+
+`PRODUCT.md` records confirmed product facts. The development-only surface brief in `.impeccable/surfaces/` records this landing page’s direction and is outside the public build. `DESIGN.md` and `.impeccable/design.json` document the finished visual system. Local review captures and detector output are ignored by Git.
 
 Standalone English privacy and terms pages are in `public/privacy.html` and `public/terms.html`, sharing `public/legal.css`. This frontend redesign does not change those documents or backend data-handling policies. Telegram and email links use the real bot and founder contact. No analytics or forms are installed.
 

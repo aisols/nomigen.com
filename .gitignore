@@ -147,3 +147,8 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Local Impeccable review evidence (surface briefs remain versioned)
+.impeccable/review/
+.impeccable/cache/
+.impeccable/logs/

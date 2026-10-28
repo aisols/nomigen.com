@@ -1,0 +1,335 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-28T14:52:22.973Z",
+  "title": "Design System: Oitu by Nomigen",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Dark Slate",
+        "tonalRamp": [
+          "oklch(15% 0.0086 228.41)",
+          "oklch(25% 0.0139 228.41)",
+          "oklch(35% 0.0182 228.41)",
+          "oklch(45% 0.0214 228.41)",
+          "oklch(58% 0.0214 228.41)",
+          "oklch(70% 0.0193 228.41)",
+          "oklch(83% 0.0129 228.41)",
+          "oklch(95% 0.0043 228.41)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Slate Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0111 227.57)",
+          "oklch(25% 0.0180 227.57)",
+          "oklch(35% 0.0235 227.57)",
+          "oklch(45% 0.0276 227.57)",
+          "oklch(58% 0.0276 227.57)",
+          "oklch(70% 0.0249 227.57)",
+          "oklch(83% 0.0166 227.57)",
+          "oklch(95% 0.0055 227.57)"
+        ]
+      },
+      "surface-deep": {
+        "role": "neutral",
+        "displayName": "Deep Slate",
+        "tonalRamp": [
+          "oklch(15% 0.0083 230.58)",
+          "oklch(25% 0.0134 230.58)",
+          "oklch(35% 0.0176 230.58)",
+          "oklch(45% 0.0207 230.58)",
+          "oklch(58% 0.0207 230.58)",
+          "oklch(70% 0.0186 230.58)",
+          "oklch(83% 0.0124 230.58)",
+          "oklch(95% 0.0041 230.58)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Soft White",
+        "tonalRamp": [
+          "oklch(15% 0.0020 165.01)",
+          "oklch(25% 0.0032 165.01)",
+          "oklch(35% 0.0042 165.01)",
+          "oklch(45% 0.0050 165.01)",
+          "oklch(58% 0.0050 165.01)",
+          "oklch(70% 0.0045 165.01)",
+          "oklch(83% 0.0030 165.01)",
+          "oklch(95% 0.0010 165.01)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Slate Text",
+        "tonalRamp": [
+          "oklch(15% 0.0078 222.21)",
+          "oklch(25% 0.0127 222.21)",
+          "oklch(35% 0.0166 222.21)",
+          "oklch(45% 0.0195 222.21)",
+          "oklch(58% 0.0195 222.21)",
+          "oklch(70% 0.0175 222.21)",
+          "oklch(83% 0.0117 222.21)",
+          "oklch(95% 0.0039 222.21)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Slate Rule",
+        "tonalRamp": [
+          "oklch(15% 0.0112 224.33)",
+          "oklch(25% 0.0182 224.33)",
+          "oklch(35% 0.0238 224.33)",
+          "oklch(45% 0.0280 224.33)",
+          "oklch(58% 0.0280 224.33)",
+          "oklch(70% 0.0252 224.33)",
+          "oklch(83% 0.0168 224.33)",
+          "oklch(95% 0.0056 224.33)"
+        ]
+      },
+      "cyan": {
+        "role": "primary",
+        "displayName": "Response Cyan",
+        "tonalRamp": [
+          "oklch(15% 0.0365 199.07)",
+          "oklch(25% 0.0593 199.07)",
+          "oklch(35% 0.0775 199.07)",
+          "oklch(45% 0.0912 199.07)",
+          "oklch(58% 0.0912 199.07)",
+          "oklch(70% 0.0821 199.07)",
+          "oklch(83% 0.0547 199.07)",
+          "oklch(95% 0.0182 199.07)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink on Cyan",
+        "tonalRamp": [
+          "oklch(15% 0.0142 213.40)",
+          "oklch(25% 0.0230 213.40)",
+          "oklch(35% 0.0301 213.40)",
+          "oklch(45% 0.0355 213.40)",
+          "oklch(58% 0.0355 213.40)",
+          "oklch(70% 0.0319 213.40)",
+          "oklch(83% 0.0213 213.40)",
+          "oklch(95% 0.0071 213.40)"
+        ]
+      },
+      "cyan-hover": {
+        "role": "primary",
+        "displayName": "Cyan Hover",
+        "tonalRamp": [
+          "oklch(15% 0.0267 197.20)",
+          "oklch(25% 0.0434 197.20)",
+          "oklch(35% 0.0568 197.20)",
+          "oklch(45% 0.0668 197.20)",
+          "oklch(58% 0.0668 197.20)",
+          "oklch(70% 0.0601 197.20)",
+          "oklch(83% 0.0401 197.20)",
+          "oklch(95% 0.0134 197.20)"
+        ]
+      },
+      "control-border": {
+        "role": "neutral",
+        "displayName": "Control Border",
+        "tonalRamp": [
+          "oklch(15% 0.0137 225.53)",
+          "oklch(25% 0.0223 225.53)",
+          "oklch(35% 0.0292 225.53)",
+          "oklch(45% 0.0343 225.53)",
+          "oklch(58% 0.0343 225.53)",
+          "oklch(70% 0.0309 225.53)",
+          "oklch(83% 0.0206 225.53)",
+          "oklch(95% 0.0069 225.53)"
+        ]
+      },
+      "control-hover": {
+        "role": "neutral",
+        "displayName": "Control Hover",
+        "tonalRamp": [
+          "oklch(15% 0.0141 225.08)",
+          "oklch(25% 0.0229 225.08)",
+          "oklch(35% 0.0299 225.08)",
+          "oklch(45% 0.0352 225.08)",
+          "oklch(58% 0.0352 225.08)",
+          "oklch(70% 0.0316 225.08)",
+          "oklch(83% 0.0211 225.08)",
+          "oklch(95% 0.0070 225.08)"
+        ]
+      },
+      "quiet-line": {
+        "role": "neutral",
+        "displayName": "Quiet Line",
+        "tonalRamp": [
+          "oklch(15% 0.0136 222.34)",
+          "oklch(25% 0.0221 222.34)",
+          "oklch(35% 0.0288 222.34)",
+          "oklch(45% 0.0339 222.34)",
+          "oklch(58% 0.0339 222.34)",
+          "oklch(70% 0.0305 222.34)",
+          "oklch(83% 0.0204 222.34)",
+          "oklch(95% 0.0068 222.34)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Main invitation; local Barlow Condensed semibold."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings; local Barlow Condensed medium."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Practice and content titles; local Barlow Condensed medium."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Section introductions and explanations."
+      },
+      "body-small": {
+        "displayName": "Supporting body",
+        "purpose": "Component explanations and content rows."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Controls and contextual labels."
+      },
+      "action": {
+        "displayName": "Primary action",
+        "purpose": "Telegram action labels."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "coaching-reveal-duration",
+        "value": "280ms",
+        "purpose": "Reveal the coaching hint through a clipping mask."
+      },
+      {
+        "name": "coaching-reveal-easing",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "The coaching hint's entrance easing."
+      },
+      {
+        "name": "anchor-scroll",
+        "value": "smooth",
+        "purpose": "Anchor navigation; becomes auto when prefers-reduced-motion is reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1040px"
+      },
+      {
+        "name": "tablet",
+        "value": "800px"
+      },
+      {
+        "name": "phone",
+        "value": "560px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Telegram action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The real external destination, with the shipped hover and keyboard-focus treatment.",
+      "html": "<a class=\"ds-primary\" href=\"https://t.me/oitubot\" target=\"_blank\" rel=\"noopener noreferrer\">Open Oitu in Telegram<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"m4 16 12-12M5 4h11v11\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg></a>",
+      "css": ".ds-primary{box-sizing:border-box;display:inline-flex;justify-content:center;align-items:center;gap:24px;min-height:54px;padding:15px 22px;border-radius:6px;font-family:Inter,Arial,sans-serif;font-size:14px;font-weight:600;line-height:1.5;text-align:center;text-decoration:none;background:var(--cyan,#83e3e7);color:var(--ink,#153137)}.ds-primary:hover{background:#aceff0}.ds-primary:focus-visible{outline:2px solid var(--text,#f3f7f5);outline-offset:5px}"
+    },
+    {
+      "name": "Text action",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "Visual sample of the practice continuation button; the application moves focus into the next panel.",
+      "html": "<button class=\"ds-text\" type=\"button\">Continue to feel the pressure<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 10h14m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg></button>",
+      "css": ".ds-text{display:inline-flex;align-items:center;gap:18px;min-height:40px;border:0;padding:5px 0;background:transparent;color:var(--cyan,#83e3e7);font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.65;text-align:left;cursor:pointer}.ds-text:hover{text-decoration:underline;text-underline-offset:5px}.ds-text:focus-visible{outline:2px solid var(--cyan,#83e3e7);outline-offset:5px}"
+    },
+    {
+      "name": "Pressure choices",
+      "kind": "chip",
+      "refersTo": "pressure-option",
+      "description": "Snapshot of the actual fieldset and selected Medium state; application selection updates aria-pressed and the live description.",
+      "html": "<fieldset class=\"ds-pressure\"><legend>Explore the pressure levels</legend><div class=\"ds-options\"><button type=\"button\" aria-pressed=\"false\">Low</button><button type=\"button\" aria-pressed=\"true\">Medium</button><button type=\"button\" aria-pressed=\"false\">High</button></div><p aria-live=\"polite\">A persistent counterpart who challenges your first answer.</p></fieldset>",
+      "css": ".ds-pressure{border:0;margin:0;padding:0;font-family:Inter,Arial,sans-serif;line-height:1.65;color:var(--text,#f3f7f5)}.ds-pressure legend{padding:0;margin-bottom:11px;font-size:12px}.ds-options{display:flex;gap:8px}.ds-options button{min-height:40px;min-width:76px;padding:8px 18px;border:1px solid #68828d;border-radius:5px;color:var(--text,#f3f7f5);background:transparent;font-family:Inter,Arial,sans-serif;font-size:12px;line-height:1.65;cursor:pointer}.ds-options button:hover:not([aria-pressed=true]){background:#2b444e}.ds-options button[aria-pressed=true]{background:var(--cyan,#83e3e7);border-color:var(--cyan,#83e3e7);color:var(--ink,#153137)}.ds-options button:focus-visible{outline:2px solid var(--cyan,#83e3e7);outline-offset:5px}.ds-pressure p{margin:10px 0 0;color:var(--muted,#b5c5cb);font-size:12px}"
+    },
+    {
+      "name": "Practice surface",
+      "kind": "card",
+      "refersTo": "practice-panel",
+      "description": "The filled interaction surface and its actual setup content; heights remain the application's responsive responsibility.",
+      "html": "<div class=\"ds-panel\"><h3>Start with your situation.</h3><p>Describe the conversation by text or voice. Check the roles and your goal, choose a voice, then decide how much pressure you want to practise with.</p><div class=\"ds-scene\"><span>Your situation, in your words</span><blockquote>“My manager wants me to work this Saturday. I want to keep my weekend free.”</blockquote></div></div>",
+      "css": ".ds-panel{padding:32px 36px 26px;background:var(--surface,#1e3038);color:var(--text,#f3f7f5);border-radius:12px;font-family:Inter,Arial,sans-serif;line-height:1.65}.ds-panel h3{margin:0;font-family:var(--display,'Barlow Condensed','Arial Narrow',sans-serif);font-size:32px;font-weight:500;line-height:1.12;letter-spacing:-.015em}.ds-panel>p{max-width:68ch;margin:11px 0 0;color:var(--muted,#b5c5cb);font-size:14px}.ds-scene{margin-top:26px;padding-top:25px;border-top:1px solid var(--line,#40545c)}.ds-scene>span{display:block;margin-bottom:12px;font-size:12px;color:var(--muted,#b5c5cb)}.ds-scene blockquote{max-width:630px;margin:0;font-family:var(--display,'Barlow Condensed','Arial Narrow',sans-serif);font-size:31px;font-weight:500;line-height:1.2;letter-spacing:-.01em}@media(max-width:1040px){.ds-panel{padding:28px}}@media(max-width:800px){.ds-panel{padding:30px}}@media(max-width:560px){.ds-panel{padding:25px 20px 20px}.ds-panel h3{font-size:29px}.ds-panel>p{font-size:13px;margin-top:12px}.ds-scene{margin-top:23px;padding-top:21px}.ds-scene>span{font-size:10px}.ds-scene blockquote{font-size:28px}}"
+    },
+    {
+      "name": "Scenario disclosure",
+      "kind": "custom",
+      "refersTo": "scenario-disclosure",
+      "description": "Native interactive disclosure, including the final title-before-context order on phones.",
+      "html": "<div class=\"ds-scenario-list\"><details class=\"ds-scenario\" open><summary><h3>The workday is over. The requests aren’t.</h3><span class=\"ds-context\">At work</span><svg class=\"ds-toggle\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 12h14m-7-7v14\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg></summary><div class=\"ds-detail\"><blockquote>“Can you take care of this tonight?”</blockquote><p>Protect your time when your manager has one more urgent task.</p></div></details></div>",
+      "css": ".ds-scenario-list{border-top:1px solid var(--line,#40545c);font-family:Inter,Arial,sans-serif;line-height:1.65;color:var(--text,#f3f7f5)}.ds-scenario{border-bottom:1px solid var(--line,#40545c)}.ds-scenario summary{display:grid;grid-template-columns:180px 1fr 24px;gap:24px;align-items:center;padding-block:26px;cursor:pointer;list-style:none}.ds-scenario summary::-webkit-details-marker{display:none}.ds-scenario summary::marker{content:''}.ds-scenario summary:focus-visible{outline:2px solid var(--cyan,#83e3e7);outline-offset:5px}.ds-context{grid-column:1;grid-row:1;font-size:12px;color:var(--muted,#b5c5cb)}.ds-scenario h3{grid-column:2;grid-row:1;margin:0;font-family:var(--display,'Barlow Condensed','Arial Narrow',sans-serif);font-size:35px;font-weight:500;line-height:1.12;letter-spacing:-.015em}.ds-toggle{color:var(--cyan,#83e3e7)}.ds-scenario[open] .ds-toggle{transform:rotate(45deg)}.ds-scenario summary:hover h3,.ds-scenario[open] h3{color:var(--cyan,#83e3e7)}.ds-detail{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:0 48px 30px 204px}.ds-detail blockquote{margin:0;font-size:22px;line-height:1.4;letter-spacing:-.015em}.ds-detail p{margin:0;color:var(--muted,#b5c5cb);font-size:14px}@media(max-width:1040px){.ds-scenario summary{grid-template-columns:130px 1fr 24px}.ds-detail{padding-left:154px;gap:30px}}@media(max-width:800px){.ds-scenario summary{grid-template-columns:105px 1fr 24px;gap:20px}.ds-scenario h3{font-size:30px}.ds-detail{padding-left:125px;padding-right:40px;grid-template-columns:1fr;gap:12px}}@media(max-width:560px){.ds-scenario summary{grid-template-columns:1fr 22px;gap:9px 15px;padding-block:22px}.ds-context{grid-column:1;grid-row:2;font-size:10px}.ds-scenario h3{grid-column:1;grid-row:1;font-size:29px}.ds-toggle{grid-column:2;grid-row:1/3;width:22px}.ds-detail{padding:0 33px 24px 0;gap:13px}.ds-detail blockquote{font-size:20px}.ds-detail p{font-size:13px}}"
+    },
+    {
+      "name": "Audio unavailable with transcript",
+      "kind": "input",
+      "refersTo": "audio-button",
+      "description": "Actual disabled playback and range states, paired with a working native transcript disclosure. No simulated playback.",
+      "html": "<div class=\"ds-audio\"><div class=\"ds-audio-main\"><button class=\"ds-audio-button\" type=\"button\" disabled aria-label=\"Play example conversation\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M6 3.8c0-.7.8-1.1 1.4-.7l10 6.2a.8.8 0 0 1 0 1.4l-10 6.2c-.6.4-1.4 0-1.4-.7V3.8Z\"/></svg></button><div class=\"ds-audio-copy\"><span class=\"ds-audio-title\">Listen to the example conversation</span><span class=\"ds-audio-status\" role=\"status\">Audio unavailable. Read the example transcript.</span></div><span class=\"ds-audio-time\" aria-label=\"0:00 of 0:00\">—:—</span></div><input class=\"ds-audio-progress\" aria-label=\"Playback position for example conversation\" type=\"range\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0\" disabled><details class=\"ds-transcript\"><summary>Read the full transcript</summary><ol><li><strong>Manager</strong><p>I need you to come in on Saturday. Everyone else is making an effort.</p></li><li><strong>You</strong><p>Why is your poor planning my problem?</p></li><li><strong>Manager</strong><p>There's no need for that tone. I'm asking you to help the team.</p></li><li><strong>You</strong><p>I'm not available this weekend.</p></li><li><strong>Manager</strong><p>I was counting on you. Can't you make an exception?</p></li><li><strong>You</strong><p>I understand. I'm still not available on Saturday.</p></li><li><strong>Manager</strong><p>All right. We'll find another way.</p></li></ol><p class=\"ds-transcript-note\">Coaching hint between replies: “Keep the boundary. Drop the accusation.” The hint is shown in text and is not part of the recording.</p></details></div>",
+      "css": ".ds-audio{min-width:0;font-family:Inter,Arial,sans-serif;line-height:1.65;color:var(--text,#f3f7f5)}.ds-audio-main{display:flex;align-items:center;gap:13px}.ds-audio-button{display:inline-flex;justify-content:center;align-items:center;width:48px;height:48px;flex-shrink:0;border-radius:50%;border:1px solid var(--cyan,#83e3e7);color:var(--cyan,#83e3e7);background:transparent;cursor:pointer}.ds-audio-button:hover:not(:disabled){background:#29454e}.ds-audio-button:disabled{border-color:#78939d;color:var(--muted,#b5c5cb);cursor:not-allowed}.ds-audio-button:focus-visible{outline:2px solid var(--cyan,#83e3e7);outline-offset:5px}.ds-audio-copy{display:flex;flex-direction:column;gap:2px;min-width:0}.ds-audio-title{font-size:13px;font-weight:500}.ds-audio-status{color:var(--muted,#b5c5cb);font-size:11px}.ds-audio-time{margin-left:auto;font-size:11px;color:var(--muted,#b5c5cb);white-space:nowrap;font-variant-numeric:tabular-nums}.ds-audio-progress{display:block;width:100%;height:20px;margin:14px 0 0;accent-color:var(--cyan,#83e3e7)}.ds-audio-progress:disabled{cursor:not-allowed}.ds-audio-progress:focus-visible{outline:2px solid var(--cyan,#83e3e7);outline-offset:5px}.ds-transcript{margin-top:15px;font-size:13px}.ds-transcript summary{width:fit-content;cursor:pointer;padding-block:5px;color:var(--muted,#b5c5cb)}.ds-transcript summary:hover{color:var(--text,#f3f7f5)}.ds-transcript summary:focus-visible{outline:2px solid var(--cyan,#83e3e7);outline-offset:5px}.ds-transcript ol{margin:24px 0 0;padding:0;list-style:none;display:grid;gap:18px}.ds-transcript li{display:grid;grid-template-columns:72px 1fr;gap:15px}.ds-transcript li strong{padding-top:2px;color:var(--cyan,#83e3e7);font-weight:500;font-size:11px}.ds-transcript li p{margin:0;font-size:14px}.ds-transcript-note{margin:20px 0 0;padding-top:17px;border-top:1px solid var(--line,#40545c);color:var(--muted,#b5c5cb);font-size:12px}@media(max-width:560px){.ds-audio-main{gap:10px}.ds-audio-button{width:44px;height:44px}.ds-audio-title{font-size:12px}.ds-audio-status,.ds-audio-time{font-size:10px}.ds-transcript{font-size:12px}.ds-transcript li{grid-template-columns:53px 1fr;gap:12px}.ds-transcript li p{font-size:13px}.ds-transcript-note{font-size:11px}}"
+    },
+    {
+      "name": "Main navigation",
+      "kind": "nav",
+      "description": "Real section anchors with the shipped mobile visibility rule and keyboard focus.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#practice\">How it works</a><a href=\"#technology\">The technology</a><a href=\"#team\">Our team</a></nav>",
+      "css": ".ds-nav{display:flex;justify-content:center;gap:34px;font-family:Inter,Arial,sans-serif;line-height:1.65}.ds-nav a{padding-block:12px;color:var(--text,#f3f7f5);font-size:13px;text-decoration:none}.ds-nav a:hover{color:var(--cyan,#83e3e7)}.ds-nav a:focus-visible{outline:2px solid var(--cyan,#83e3e7);outline-offset:5px}@media(max-width:1040px){.ds-nav{gap:22px}}@media(max-width:560px){.ds-nav{gap:17px}.ds-nav a{font-size:10px}.ds-nav a:last-child{display:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Say it out loud",
+    "overview": "Spoken words are the visual material: emphatic condensed headings, clear dialogue, and quiet supporting copy. Oitu leads as the product, with Nomigen as the platform attribution.\n\nDark slate bands, open rows, fine rules, and generous space create the structure. Cyan marks responses, selected controls, and primary actions. The occasional rounded practice panel groups an interaction without turning the page into a dashboard.",
+    "keyCharacteristics": [
+      "Condensed display lettering with readable Inter body text.",
+      "One cyan accent across a flat slate palette.",
+      "Open content rows and a contained practice interaction.",
+      "Visible keyboard focus, semantic controls, and real audio states."
+    ],
+    "rules": [
+      {
+        "name": "The One Accent Rule",
+        "body": "Use cyan for emphasized responses, selected controls, and primary actions. Group supporting material with the existing slate tones.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Barlow Condensed carries display emphasis; Inter carries explanation and controls. Preserve this deliberate contrast.",
+        "section": "typography"
+      },
+      {
+        "name": "The Open Surface Rule",
+        "body": "Separate content with space, tonal fills, and fine rules. The implementation uses no shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the local display and body fonts in their established roles.",
+      "Do preserve native headings, links, buttons, details, language direction, and tab semantics.",
+      "Do retain visible focus and reduced-motion behavior.",
+      "Do use actual recordings, text status, and an available transcript."
+    ],
+    "donts": [
+      "Don't add a second accent, blurred gradients, console instrumentation, or decorative raster imagery.",
+      "Don't turn every content group into a card or add decorative section kickers.",
+      "Don't simulate audio playback or replace semantic content with an image.",
+      "Don't introduce remote fonts or activate archived illustrations."
+    ]
+  }
+}

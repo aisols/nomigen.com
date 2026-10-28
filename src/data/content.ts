@@ -2,8 +2,9 @@ export const TELEGRAM = 'https://t.me/oitubot'
 export const CONTACT = 'mailto:founder@nomigen.com'
 
 export const hero = {
-  headline: 'Rehearse your difficult conversation.',
-  description: 'Bring the situation you’re facing. Practise with an expressive AI voice, find the words that hold your boundary, and try again.',
+  headline: 'Hard to say?',
+  answer: 'Say it here first.',
+  description: 'Oitu is a place to practise difficult conversations. Bring your situation, talk it through with an expressive AI voice, and find the words that hold your boundary.',
 }
 
 export type DialogueLine = { speaker: 'Manager' | 'You'; text: string }
@@ -26,7 +27,7 @@ export const practice = {
 
 export type PracticeStep = { title: string; heading: string; description: string }
 export const practiceSteps: PracticeStep[] = [
-  { title: 'Set the scene', heading: 'Start with your situation.', description: 'Describe the conversation by text or voice. Check the roles and your goal, then choose how much pressure you want to practise with.' },
+  { title: 'Set the scene', heading: 'Start with your situation.', description: 'Describe the conversation by text or voice. Check the roles and your goal, choose a voice, then decide how much pressure you want to practise with.' },
   { title: 'Feel the pressure', heading: 'Hear how it feels.', description: 'Your counterpart has their own point of view. Reply in Telegram by voice or text, at your own pace.' },
   { title: 'Find your response', heading: 'A little help, when you need it.', description: 'Ask for a hint in the middle of the conversation. Understand the next move, then use the suggested words or find your own.' },
   { title: 'Review & repeat', heading: 'Take the next attempt further.', description: 'Get feedback on the words you used and how the conversation changed. Keep the situation and try another approach.' },
