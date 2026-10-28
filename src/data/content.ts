@@ -47,7 +47,7 @@ export const scenarioCategories: ScenarioCategory[] = [
 
 export const principles: ContentCard[] = [
   { title: 'Overcome the freeze', description: 'Confrontation makes words harder to find. Knowing your answer in theory and saying it out loud under vocal pressure are two different cognitive skills.' },
-  { title: 'Rehearse at a safe pace', description: 'Turn-based voice messaging gives you breathing room to think, use a coaching hint, and build vocal muscle memory before real-time calls.' },
+  { title: 'Stress inoculation, step by step', description: 'Graduated exposure to controlled pressure — the principle behind stress inoculation training — builds composure before the real conversation. Turn-based voice notes give you room to think and use a hint.' },
   { title: 'Catch blind spots', description: 'Early users discover not only where they sound hesitant, but where defensive phrasing unintentionally escalates the conflict.' },
 ]
 
@@ -59,15 +59,34 @@ export const cultures: CulturalContext[] = [
   { context: 'An uneven power dynamic', theme: 'Status & direct pressure', example: '“I make the decisions here. Just get it done.”' },
 ]
 
+type Language = { code: string; lang: string; name: string; group: string; dir?: 'rtl' }
+export const languages: Language[] = [
+  { code: 'EN', lang: 'en', name: 'English', group: 'Germanic' },
+  { code: 'DE', lang: 'de', name: 'Deutsch', group: 'Germanic' },
+  { code: 'ES', lang: 'es', name: 'Español', group: 'Romance' },
+  { code: 'PL', lang: 'pl', name: 'Polski', group: 'Slavic' },
+  { code: 'RU', lang: 'ru', name: 'Русский', group: 'Slavic' },
+  { code: 'AR', lang: 'ar', name: 'العربية', group: 'Semitic', dir: 'rtl' },
+]
+
+export const pipelineFlow = ['scribe_v2', 'LLM driver · cultural adaptation', 'eleven_v4 + audio_effects']
+
+type EngineStage = ContentCard & { label: string; tag: string }
+export const engineStages: EngineStage[] = [
+  { label: '01 / MULTILINGUAL STT', tag: 'scribe_v2', title: 'Listen & classify', description: 'ElevenLabs Scribe v2 transcribes voice input in all 6 languages within a single pipeline, while our classifier evaluates intent, tone and boundary firmness.' },
+  { label: '02 / DIALOGUE & DIRECTING', tag: 'LLM driver', title: 'Shape the response', description: 'A culturally adapted LLM driver generates the character’s reply, a validation stage checks it, and the director automatically injects standardized English emotional delivery tags before synthesis.' },
+  { label: '03 / EXPRESSIVE VOICE', tag: 'eleven_v4 · Text to Dialogue · audio_effects', title: 'Make it feel real', description: 'Eleven v4 via the Text to Dialogue API renders passive aggression, warmth, hesitation or reluctant agreement, layered with native audio_effects scenes — offices, cafés.' },
+]
+
 type RoadmapItem = ContentCard & { phase: string }
 export const roadmap: RoadmapItem[] = [
-  { phase: '01 / LIVE IN PRIVATE ALPHA', title: 'Multilingual Telegram Trainer', description: 'Turn-based voice practice across 6 languages (EN, ES, DE, AR, PL, RU) with acoustic scenes, hints and post-session breakdowns.' },
-  { phase: '02 / IN R&D', title: 'Standalone Real-Time App', description: 'Dedicated mobile & web app featuring low-latency streaming voice calls and custom behavioral personas.' },
-  { phase: '03 / EXPANSION', title: 'New Verticals & Teams', description: 'Dedicated modules for Sales & Negotiations, Adult Dating Confidence, and B2B team coaching.' },
+  { phase: '01 / LIVE IN PRIVATE ALPHA', title: 'Multilingual Telegram Trainer', description: 'Turn-based voice practice in 6 languages across four language groups, built on ElevenLabs scribe_v2 and eleven_v4, with acoustic scenes, coaching hints and post-session breakdowns.' },
+  { phase: '02 / NEXT · R&D', title: 'Standalone Real-Time App', description: 'Native mobile and web app with real-time streaming voice dialogue at a sub-500 ms latency target, built on the founders’ low-latency, high-load systems expertise.' },
+  { phase: '03 / SCALE', title: 'Verticals & Monetization', description: 'B2C subscriptions with session tiers, premium custom behavioral profiles that model a specific counterpart’s pressure style from your examples — without voice cloning — and new Sales & Negotiations and Dating verticals.' },
 ]
 
 type TeamMember = { name: string; role: string; bio: string }
 export const team: TeamMember[] = [
-  { name: 'Mikhail Zaprudin', role: 'Founder · Product & Engineering', bio: '15+ years in software architecture, specializing in low-latency, high-reliability HFT and trading systems—driving Nomigen’s multi-stage voice pipeline and real-time streaming R&D.' },
-  { name: 'Kirill Kuprin', role: 'Co-Founder · Security & Infrastructure', bio: '11+ years in cybersecurity and cloud infrastructure (former CISO, ISO 27001), focusing on PII tokenization and privacy-by-design for external LLM and audio pipelines.' },
+  { name: 'Mikhail Zaprudin', role: 'Founder · Product & Engineering', bio: '15+ years architecting low-latency, high-load HFT and trading systems — now leading Nomigen’s multi-stage voice pipeline and real-time streaming R&D.' },
+  { name: 'Kirill Kuprin', role: 'Co-Founder · Security & Infrastructure', bio: '11+ years in information security and cloud infrastructure; former CISO (ISO 27001). Leads privacy-by-design and PII protection across the LLM and audio pipeline.' },
 ]

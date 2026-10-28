@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { AudioPreview } from './components/AudioPreview'
 import { Tabs } from './components/Tabs'
-import { cultures, hero, practiceBenefits, practiceSteps, principles, roadmap, scenarioCategories, team, TELEGRAM } from './data/content'
+import { cultures, engineStages, hero, languages, pipelineFlow, practiceBenefits, practiceSteps, principles, roadmap, scenarioCategories, team, TELEGRAM } from './data/content'
 
 function TelegramLink({ children = 'Try Alpha in Telegram' }: { children?: string }) {
   return <a className="button button-primary" href={TELEGRAM} target="_blank" rel="noopener noreferrer">{children}<span aria-hidden="true">→</span></a>
@@ -24,7 +24,7 @@ export default function App() {
             <h1 className="hero-title" id="hero-title">{hero.headline}</h1>
             <p className="hero-description">{hero.description}</p><p className="hero-upcoming">{hero.upcoming}</p>
             <div className="hero-actions"><TelegramLink /></div>
-            <p className="hero-footnote">Built for adults 18+ · Powered by ElevenLabs expressive voice AI</p>
+            <p className="hero-footnote">Powered by ElevenLabs · <code>scribe_v2</code> + <code>eleven_v4</code></p>
           </div>
           <AudioPreview />
         </div>
@@ -60,7 +60,7 @@ export default function App() {
       <section className="section container" id="methodology" aria-labelledby="science-title">
         <div className="section-heading"><p className="eyebrow">03 / WHY REHEARSAL</p><h2 id="science-title">Knowing the words<br />is only the beginning.</h2></div>
         <div className="principles-grid">{principles.map((item, index) => <article className="principle-card" key={item.title}><span className="scenario-number" aria-hidden="true">0{index + 1}</span><h3>{item.title}</h3><p>{item.description}</p></article>)}</div>
-        <div className="reading-links"><p>Oitu is a communication practice tool, not clinical therapy. Background reading: <a href="https://www.nimh.nih.gov/health/topics/psychotherapies" target="_blank" rel="noopener noreferrer">NIMH: psychotherapies ↗</a> · <a href="https://www.ptsd.va.gov/apps/decisionaid/resources/PTSDDecisionAidSIT.pdf" target="_blank" rel="noopener noreferrer">VA: stress inoculation training ↗</a>.</p></div>
+        <div className="reading-links"><p>Research background: <a href="https://www.nimh.nih.gov/health/topics/psychotherapies" target="_blank" rel="noopener noreferrer">NIMH: psychotherapies ↗</a> · <a href="https://www.ptsd.va.gov/apps/decisionaid/resources/PTSDDecisionAidSIT.pdf" target="_blank" rel="noopener noreferrer">VA: stress inoculation training ↗</a></p></div>
       </section>
 
       <section className="section container" id="scenarios" aria-labelledby="scenarios-title">
@@ -74,17 +74,15 @@ export default function App() {
       </section>
 
       <section className="section container" id="languages" aria-labelledby="languages-title">
-        <div className="section-heading"><p className="eyebrow">05 / CULTURAL FLUENCY</p><h2 id="languages-title">Different words.<br />Familiar pressure.</h2><p className="section-intro">Live across 6 languages spanning four language groups (English, Spanish, German, Arabic, Polish and Russian). Our language-agnostic directing pipeline adapts interpersonal pressure to local cultural norms and scales rapidly to new locales.</p></div>
+        <div className="section-heading"><p className="eyebrow">05 / CULTURAL FLUENCY</p><h2 id="languages-title">Different words.<br />Familiar pressure.</h2><p className="section-intro">Live across 6 languages spanning four language groups. Our language-agnostic directing pipeline adapts interpersonal pressure to local cultural norms and scales rapidly to new locales.</p></div>
+        <ul className="language-list" aria-label="Live languages">{languages.map(item => <li className="language-item" key={item.code}><span className="language-code">{item.code}</span><span className="language-name" lang={item.lang} dir={item.dir}>{item.name}</span><span className="language-group">{item.group}</span></li>)}</ul>
         <div className="culture-grid">{cultures.map(item => <article className="culture-card" key={item.context}><span className="card-label">{item.context}</span><h3>{item.theme}</h3><blockquote>{item.example}</blockquote></article>)}</div>
       </section>
 
       <section className="section container" id="technology" aria-labelledby="tech-title">
         <div className="section-heading"><p className="eyebrow">06 / UNDER THE HOOD</p><h2 id="tech-title">Nomigen is the engine.<br />Oitu is your practice room.</h2><p className="section-intro">A custom multi-stage dialogue pipeline powered by ElevenLabs expressive synthesis and multilingual transcription.</p></div>
-        <div className="engine-grid">
-          <article className="engine-stage"><span className="engine-number">01 / MULTILINGUAL STT</span><h3>Listen & classify</h3><p>ElevenLabs Scribe v2 transcribes voice input across all 6 supported languages while our classifier evaluates intent, tone and boundary firmness.</p></article>
-          <article className="engine-stage"><span className="engine-number">02 / DIALOGUE & DIRECTING</span><h3>Shape the response</h3><p>Culturally adapted LLM stages generate and validate character pushback, then inject standardized English emotional delivery cues.</p></article>
-          <article className="engine-stage"><span className="engine-number">03 / EXPRESSIVE VOICE</span><h3>Make it feel real</h3><p>ElevenLabs v4 (Text to Dialogue API) renders nuanced vocal dynamics—hesitation, irritation or warmth—layered with native acoustic scene effects.</p></article>
-        </div>
+        <p className="pipeline-flow"><span className="visually-hidden">Pipeline: </span>{pipelineFlow.map((item, index) => <span key={item}>{index > 0 && <><span aria-hidden="true" className="pipeline-arrow">→</span><span className="visually-hidden">, then </span></>}<code>{item}</code></span>)}</p>
+        <div className="engine-grid">{engineStages.map(item => <article className="engine-stage" key={item.label}><span className="engine-number">{item.label}</span><h3>{item.title}</h3><code className="engine-tag">{item.tag}</code><p>{item.description}</p></article>)}</div>
         <div className="tech-facts"><p><strong>Multi-stage pipeline</strong> Input classification, dialogue validation & automated speech directing.</p><p><strong>Privacy & ethics</strong> Synthetic behavioral archetypes with PII protection. No unauthorized voice cloning.</p></div>
         <div className="team-grid">
           {team.map(member => <article className="team-card" key={member.name}><span className="card-label">{member.role}</span><h3>{member.name}</h3><p>{member.bio}</p></article>)}
@@ -95,8 +93,8 @@ export default function App() {
     <footer className="site-footer" id="roadmap"><div className="container">
       <div className="footer-heading"><p className="eyebrow">07 / WHAT’S NEXT</p><h2>A practice habit today.<br />A real-time voice platform tomorrow.</h2></div>
       <div className="roadmap-grid">{roadmap.map(item => <article className="roadmap-card" key={item.phase}><span className="phase-label">{item.phase}</span><h3>{item.title}</h3><p>{item.description}</p></article>)}</div>
-      <div className="footer-cta"><TelegramLink>Start Your First Practice</TelegramLink><span>Powered by ElevenLabs Voice AI</span></div>
-      <div className="footer-legal"><p className="platform-description">Nomigen — AI Voice Simulation Platform (creator of Oitu).</p><p>Designed exclusively for adult learners (18+). Not a substitute for clinical therapy or medical advice.</p><nav aria-label="Legal"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a></nav></div>
+      <div className="footer-cta"><TelegramLink>Start Your First Practice</TelegramLink><span>Powered by ElevenLabs · <code>scribe_v2 + eleven_v4</code></span></div>
+      <div className="footer-legal"><p className="platform-description">Nomigen — AI Voice Simulation Platform (creator of Oitu).</p><p className="compliance-plaque">Designed exclusively for adult learners (18+). Not a substitute for clinical therapy or medical advice.</p><nav aria-label="Legal"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a></nav></div>
       <div className="footer-bottom"><Brand /><a href="mailto:founder@nomigen.com">Contact: founder@nomigen.com</a><a href={TELEGRAM} target="_blank" rel="noopener noreferrer">@oitubot ↗</a><a href="https://nomigen.com">nomigen.com</a></div>
     </div></footer>
   </>
