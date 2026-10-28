@@ -1,26 +1,38 @@
 import { useEffect, useRef, useState } from 'react'
-import type { CSSProperties } from 'react'
-import { preview } from '../data/content'
 
-type AudioState = 'checking' | 'ready' | 'starting' | 'playing' | 'unavailable'
-const bars = [12, 20, 14, 30, 42, 24, 48, 34, 22, 42, 54, 30, 18, 38, 46, 26, 14, 34, 48, 26, 40, 18, 30, 12]
+type AudioState = 'checking' | 'ready' | 'starting' | 'playing' | 'ended' | 'unavailable'
+type AudioPreviewProps = { source: string; title: string; label: string; compact?: boolean }
+let activeAudio: HTMLAudioElement | null = null
 
-export function AudioPreview() {
+function time(seconds: number) {
+  if (!Number.isFinite(seconds)) return '0:00'
+  return `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, '0')}`
+}
+
+export function AudioPreview({ source, title, label, compact = false }: AudioPreviewProps) {
   const audio = useRef<HTMLAudioElement>(null)
   const operation = useRef(0)
   const mounted = useRef(false)
   const [state, setState] = useState<AudioState>('checking')
+  const [duration, setDuration] = useState(0)
+  const [position, setPosition] = useState(0)
 
   useEffect(() => {
     mounted.current = true
     const controller = new AbortController()
     const element = audio.current
-    fetch(preview.source, { method: 'HEAD', signal: controller.signal })
+    setState('checking')
+    setDuration(0)
+    setPosition(0)
+    fetch(source, { method: 'HEAD', signal: controller.signal })
       .then(response => {
         if (!mounted.current || controller.signal.aborted) return
-        const available = response.ok && /^audio\//i.test(response.headers.get('content-type') ?? '')
-        if (available && element) element.src = preview.source
-        setState(available ? 'ready' : 'unavailable')
+        if (!response.ok || !/^audio\//i.test(response.headers.get('content-type') ?? '') || !element) {
+          setState('unavailable')
+          return
+        }
+        element.src = source
+        element.load()
       })
       .catch(() => {
         if (mounted.current && !controller.signal.aborted) setState('unavailable')
@@ -32,41 +44,52 @@ export function AudioPreview() {
       element?.pause()
       element?.removeAttribute('src')
       element?.load()
+      if (activeAudio === element) activeAudio = null
     }
-  }, [])
+  }, [source])
 
   async function toggle() {
     const element = audio.current
-    if (!element || state === 'unavailable' || state === 'checking' || state === 'starting') return
+    if (!element || state === 'unavailable' || state === 'checking') return
     const request = ++operation.current
-    if (state === 'playing') {
+    if (!element.paused) {
       element.pause()
       setState('ready')
       return
     }
+    if (activeAudio && activeAudio !== element) activeAudio.pause()
+    activeAudio = element
+    if (element.ended) element.currentTime = 0
     setState('starting')
     try {
-      if (element.ended) element.currentTime = 0
       await element.play()
       if (mounted.current && request === operation.current) setState('playing')
     } catch (error) {
       if (!mounted.current || request !== operation.current) return
-      setState(error instanceof DOMException && error.name === 'NotAllowedError' ? 'ready' : 'unavailable')
+      setState(error instanceof DOMException && (error.name === 'NotAllowedError' || error.name === 'AbortError') ? 'ready' : 'unavailable')
     }
   }
 
+  const playing = state === 'playing' || state === 'starting'
   const unavailable = state === 'unavailable'
-  const playing = state === 'playing'
-  return <aside className={`audio-preview${playing ? ' is-playing' : ''}`} aria-label="Confrontation audio preview">
-    <span className="audio-preview-label">A moment you might recognize</span>
-    <blockquote className="audio-preview-quote">“{preview.quote}”</blockquote>
-    <div className="audio-controls">
-      <button className="audio-play" type="button" onClick={toggle} disabled={unavailable || state === 'checking' || state === 'starting'} aria-label={playing ? 'Pause preview' : 'Play confrontation preview'}>
-        <span aria-hidden="true">{playing ? 'Ⅱ' : '▶'}</span>
+  const status = unavailable ? 'Audio unavailable. Read the example transcript.' : state === 'checking' ? 'Loading audio…' : state === 'starting' ? 'Loading playback…' : state === 'playing' ? 'Playing' : state === 'ended' ? 'Finished. Play again.' : 'Ready to listen'
+
+  return <div className={`audio-player${compact ? ' audio-player-compact' : ''}`}>
+    <div className="audio-player-main">
+      <button className="audio-button" type="button" onClick={toggle} disabled={unavailable || state === 'checking'} aria-label={`${playing ? 'Pause' : state === 'ended' ? 'Replay' : 'Play'} ${label}`}>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">{playing ? <><rect x="5" y="4" width="3" height="12" rx="1" /><rect x="12" y="4" width="3" height="12" rx="1" /></> : <path d="M6 3.8c0-.7.8-1.1 1.4-.7l10 6.2a.8.8 0 0 1 0 1.4l-10 6.2c-.6.4-1.4 0-1.4-.7V3.8Z" />}</svg>
       </button>
-      <div className="audio-wave" aria-hidden="true">{bars.map((height, index) => <span key={index} style={{ '--bar-height': `${height}px`, '--bar-delay': `${index * -0.09}s` } as CSSProperties} />)}</div>
+      <div className="audio-copy"><span className="audio-title">{title}</span><span className="audio-status" role="status">{status}</span></div>
+      <span className="audio-time" aria-label={`${time(position)} of ${time(duration)}`}>{duration > 0 ? `${time(position)} / ${time(duration)}` : '—:—'}</span>
     </div>
-    <div className="audio-preview-footer"><span className="audio-status" role="status">{unavailable ? 'Audio preview coming soon' : state === 'checking' ? 'Checking audio preview…' : state === 'starting' ? 'Loading preview…' : playing ? 'Playing preview' : 'Listen to confrontation preview'}</span><span>Synthetic boss</span></div>
-    <audio ref={audio} preload="none" onEnded={() => { operation.current += 1; setState('ready') }} onPause={() => setState(current => current === 'playing' ? 'ready' : current)} onError={() => { operation.current += 1; setState('unavailable') }} />
-  </aside>
+    {!compact && <input className="audio-progress" aria-label={`Playback position for ${label}`} type="range" min="0" max={duration || 1} step="0.1" value={position} disabled={!duration || unavailable} onChange={event => {
+      const next = Number(event.target.value)
+      if (audio.current) audio.current.currentTime = next
+      setPosition(next)
+    }} />}
+    <audio ref={audio} preload="metadata" onLoadedMetadata={event => {
+      setDuration(Number.isFinite(event.currentTarget.duration) ? event.currentTarget.duration : 0)
+      setState(current => current === 'checking' ? 'ready' : current)
+    }} onTimeUpdate={event => setPosition(event.currentTarget.currentTime)} onPlaying={() => setState('playing')} onWaiting={() => setState(current => current === 'playing' ? 'starting' : current)} onEnded={() => { operation.current += 1; setState('ended') }} onPause={() => { operation.current += 1; setState(current => current === 'unavailable' || current === 'checking' || current === 'ended' ? current : 'ready') }} onError={() => { operation.current += 1; setState('unavailable') }} />
+  </div>
 }

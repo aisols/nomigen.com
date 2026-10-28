@@ -1,1 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#0A0D12"/><text x="80" y="100" fill="#00E5FF" font-family="sans-serif" font-size="23" letter-spacing="3">OITU // AI VOICE GYM</text><text x="75" y="250" fill="#F8FAFC" font-family="sans-serif" font-size="79" font-weight="700">Practice saying no.</text><text x="75" y="345" fill="#F8FAFC" font-family="sans-serif" font-size="79" font-weight="700">Stand your ground.</text><text x="80" y="415" fill="#A1ADBD" font-family="sans-serif" font-size="27">Realistic confrontation. Your voice. Stronger boundaries.</text><path d="M80 505h44m14-10v20m14-30v40m14-48v56m14-42v28m14-18v8m14-12v16m14-8h44" stroke="#00E5FF" stroke-width="4" stroke-linecap="round"/><text x="80" y="574" fill="#A1ADBD" font-family="sans-serif" font-size="20">Powered by Nomigen</text><text x="859" y="574" fill="#00E5FF" font-family="sans-serif" font-size="24">@oitubot →</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs><style>@font-face{font-family:Inter;src:url('/fonts/inter-latin-variable.woff2')}text{font-family:Inter,Arial,sans-serif}</style></defs>
+  <rect width="1200" height="630" fill="#10171b"/>
+  <text x="70" y="88" fill="#f4f7f6" font-size="45" font-weight="650" letter-spacing="-3">oitu</text>
+  <text x="164" y="85" fill="#b6c5c9" font-size="16">by Nomigen</text>
+  <text x="70" y="240" fill="#f4f7f6" font-size="71" font-weight="500" letter-spacing="-4">Rehearse your</text>
+  <text x="70" y="322" fill="#f4f7f6" font-size="71" font-weight="500" letter-spacing="-4">difficult</text>
+  <text x="70" y="404" fill="#f4f7f6" font-size="71" font-weight="500" letter-spacing="-4">conversation.</text>
+  <text x="74" y="470" fill="#b6c5c9" font-size="22">Voice practice in Telegram.</text>
+  <rect x="690" y="166" width="440" height="280" rx="18" fill="#182328"/>
+  <text x="722" y="208" fill="#b6c5c9" font-size="14">Your manager</text>
+  <text x="722" y="250" fill="#f4f7f6" font-size="26">“Everyone else is</text>
+  <text x="722" y="286" fill="#f4f7f6" font-size="26">making an effort.”</text>
+  <path d="M761 330v80" stroke="#67e8ef" stroke-width="3"/>
+  <text x="781" y="345" fill="#67e8ef" font-size="13">You, with a little practice</text>
+  <text x="781" y="379" fill="#f4f7f6" font-size="25">“I'm not available</text>
+  <text x="781" y="412" fill="#f4f7f6" font-size="25">this weekend.”</text>
+  <circle cx="78" cy="563" r="5" fill="#67e8ef"/>
+  <text x="96" y="570" fill="#b6c5c9" font-size="17">Live in Private Alpha</text>
+  <text x="974" y="570" fill="#67e8ef" font-size="19">nomigen.com</text>
+</svg>
